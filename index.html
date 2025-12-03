@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sarate Surveyor - Govt Approved Land Surveyors in Pune. Est. 1996. Experts in Pipeline, Topographic, and Boundary Surveys.">
+    <title>Sarate Surveyor | Precision Land Surveying Experts</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0a2342; /* Deep Engineering Navy */
+            --secondary: #ffba08; /* Construction Safety Yellow */
+            --light: #f8f9fa;
+            --dark: #212529;
+            --text-gray: #6c757d;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+            color: var(--dark);
+        }
+
+        h1, h2, h3, h4, h5, .navbar-brand, .btn {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+        }
+
+        /* --- Navbar --- */
+        .navbar {
+            background: rgba(10, 35, 66, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: #fff !important;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .navbar-brand span {
+            color: var(--secondary);
+        }
+
+        .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            margin-left: 15px;
+            letter-spacing: 0.5px;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--secondary) !important;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            background: linear-gradient(rgba(10, 35, 66, 0.8), rgba(10, 35, 66, 0.7)), 
+                        url("https://www.redhawksurveying.com/wp-content/uploads/2024/02/topographers-two-men.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            color: #fff;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .btn-custom {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 12px 35px;
+            font-weight: 600;
+            border-radius: 2px;
+            border: none;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .btn-custom:hover {
+            background: #fff;
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* --- Stats Badge --- */
+        .stats-wrapper {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 40px 0;
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .stat-box { border-right: 1px solid rgba(10,35,66,0.2); }
+        .stat-box:last-child { border-right: none; }
+        .stat-number { font-size: 2.5rem; font-weight: 700; margin-bottom: 0; }
+        .stat-label { font-size: 0.9rem; font-weight: 600; letter-spacing: 1px; }
+
+        /* --- Section Titles --- */
+        .section-padding { padding: 100px 0; }
+        .section-title {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        .section-title h6 {
+            color: var(--secondary);
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 10px;
+        }
+        .line {
+            width: 60px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 15px auto 0;
+        }
+
+        /* --- Services --- */
+        .service-card {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            transition: 0.4s;
+            border-bottom: 3px solid transparent;
+            height: 100%;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 3px solid var(--secondary);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 186, 8, 0.1);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 28px;
+            margin-bottom: 25px;
+            transition: 0.3s;
+        }
+        .service-card:hover .icon-box {
+            background: var(--secondary);
+            color: #fff;
+        }
+        .service-card h4 { font-size: 1.25rem; font-weight: 600; margin-bottom: 15px; }
+        .service-card p { color: var(--text-gray); font-size: 0.95rem; line-height: 1.6; }
+
+        /* --- Portfolio --- */
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            margin-bottom: 24px;
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+        .portfolio-overlay {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(10,35,66,0.9), transparent);
+            transition: 0.4s;
+            color: #fff;
+        }
+        .portfolio-item:hover img { transform: scale(1.1); }
+        .portfolio-item:hover .portfolio-overlay { bottom: 0; }
+
+        /* --- Client Logos Slider --- */
+        .client-section { background: #f4f4f4; padding: 50px 0; }
+        .logo-slider {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+        .logo-track {
+            display: flex;
+            width: calc(200px * 10); /* Adjust based on logos */
+            animation: scroll 20s linear infinite;
+        }
+        .logo-slide {
+            width: 200px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+        }
+        .logo-slide img {
+            max-width: 100%;
+            max-height: 60px;
+            filter: grayscale(0%);
+            opacity: 0.7;
+            transition: 0.3s;
+        }
+        .logo-slide img:hover { filter: grayscale(0%); opacity: 1; }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-200px * 5)); }
+        }
+
+        /* --- Contact --- */
+        .contact-bg {
+            background: var(--primary);
+            color: #fff;
+            border-radius: 10px;
+            padding: 50px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        .form-control {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            padding: 12px;
+            border-radius: 2px;
+        }
+        .form-control:focus {
+            background: rgba(255,255,255,0.2);
+            box-shadow: none;
+            border-color: var(--secondary);
+            color: #fff;
+        }
+        .form-control::placeholder { color: rgba(255,255,255,0.5); }
+        .info-item {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        .info-icon {
+            font-size: 24px;
+            color: var(--secondary);
+            margin-right: 20px;
+            margin-top: 5px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #061529;
+            color: rgba(255,255,255,0.7);
+            padding: 60px 0 20px;
+            font-size: 0.9rem;
+        }
+        footer h5 { color: #fff; margin-bottom: 25px; letter-spacing: 1px; }
+        footer a { color: rgba(255,255,255,0.7); text-decoration: none; transition: 0.3s; }
+        footer a:hover { color: var(--secondary); padding-left: 5px; }
+        .social-link {
+            width: 40px; height: 40px;
+            background: rgba(255,255,255,0.1);
+            display: inline-flex;
+            align-items: center; justify-content: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            color: #fff;
+            transition: 0.3s;
+        }
+        .social-link:hover { background: var(--secondary); color: var(--primary); }
+
+        /* --- Mobile Adjustments --- */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.2rem; }
+            .stat-box { border-right: none; border-bottom: 1px solid rgba(10,35,66,0.1); padding-bottom: 20px; margin-bottom: 20px; }
+            .stat-box:last-child { border-bottom: none; }
+            .section-padding { padding: 60px 0; }
+            .contact-bg { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-drafting-compass me-2"></i>SARATE <span>SURVEYOR</span>
+            </a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a href="tel:9307628023" class="btn btn-custom btn-sm rounded-pill"><i class="fas fa-phone-alt me-2"></i>Call Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 hero-content" data-aos="fade-up">
+                    <span class="text-uppercase text-warning fw-bold mb-2 d-block">Est. 1996 | Govt. Approved</span>
+                    <h1>ACCURATE SURVEYS FOR <br> A BETTER TOMORROW</h1>
+                    <p>Providing precision land surveying, mapping, and engineering solutions across All over India. Trusted by industry leaders.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#services" class="btn btn-custom">Our Services</a>
+                        <a href="#portfolio" class="btn btn-outline-light px-4 py-2 fw-bold" style="border: 2px solid #fff; border-radius: 2px;">View Projects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <div class="container">
+        <div class="stats-wrapper rounded">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 stat-box mb-3 mb-md-0">
+                    <div class="stat-number">28+</div>
+                    <div class="stat-label">YEARS EXP</div>
+                </div>
+                <div class="col-md-3 col-6 stat-box mb-3 mb-md-0">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">PROJECTS</div>
+                </div>
+                <div class="col-md-3 col-6 stat-box">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">ACCURACY</div>
+                </div>
+                <div class="col-md-3 col-6 stat-box">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">TOP CLIENTS</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="position-relative">
+                        <!-- Image of Survey Equipment -->
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop" class="img-fluid rounded shadow-lg w-100" alt="Surveyor at work">
+                        <div class="bg-warning p-4 position-absolute bottom-0 start-0 m-4 rounded shadow d-none d-md-block" style="max-width: 250px;">
+                            <h5 class="fw-bold m-0 text-dark">Udyam Registered Enterprise</h5>
+                            <small class="text-dark">Official Govt. Certification</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
+                    <div class="section-title text-start">
+                        <h6>WHO WE ARE</h6>
+                        <h2>Sarate Surveyor</h2>
+                        <div class="line ms-0"></div>
+                    </div>
+                    <p class="lead text-muted fst-italic">Formerly known as Sarate Surveyor, we have been setting benchmarks in the surveying industry since 1996.</p>
+                    <p>Located in Pune, we specialize in a wide range of surveying solutions using advanced technologies like Total Stations, DGPS, and Auto Levels. We are proud to serve major clients like HPCL, Indian Oil, and various municipal corporations.</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-6 mb-3">
+                            <i class="fas fa-check-circle text-warning me-2"></i> Modern Equipment
+                        </div>
+                        <div class="col-6 mb-3">
+                            <i class="fas fa-check-circle text-warning me-2"></i> Timely Delivery
+                        </div>
+                        <div class="col-6 mb-3">
+                            <i class="fas fa-check-circle text-warning me-2"></i> Govt. Compliant
+                        </div>
+                        <div class="col-6 mb-3">
+                            <i class="fas fa-check-circle text-warning me-2"></i> Expert Team
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-dark mt-3">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h6>WHAT WE DO</h6>
+                <h2>Our Expertise</h2>
+                <div class="line"></div>
+                <p class="mt-3 text-muted">Comprehensive surveying solutions for civil and structural engineering.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card text-center">
+                        <div class="icon-box mx-auto">
+                            <i class="fas fa-fire-alt"></i>
+                        </div>
+                        <h4>Gas Pipeline Survey</h4>
+                        <p>Specialized route planning, geotechnical analysis, and safety inspections for high-pressure gas pipelines (HPCL/BPCL).</p>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card text-center">
+                        <div class="icon-box mx-auto">
+                            <i class="fas fa-faucet"></i>
+                        </div>
+                        <h4>Water Pipeline Survey</h4>
+                        <p>Precise alignment, elevation mapping, and hydraulic analysis for municipal and industrial water distribution networks.</p>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card text-center">
+                        <div class="icon-box mx-auto">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h4>Boundary Survey</h4>
+                        <p>Accurate demarcation of property lines to resolve disputes and facilitate real estate transactions and fencing.</p>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card text-center">
+                        <div class="icon-box mx-auto">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <h4>Topographic Survey</h4>
+                        <p>Detailed contour mapping capturing natural and man-made features, essential for land development and architectural design.</p>
+                    </div>
+                </div>
+                <!-- Service 5 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card text-center">
+                        <div class="icon-box mx-auto">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <h4>Road Survey</h4>
+                        <p>L-Section and Cross-Section profiling for highway construction, pavement analysis, and traffic flow evaluation.</p>
+                    </div>
+                </div>
+                <!-- Service 6 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card text-center">
+                        <div class="icon-box mx-auto">
+                            <i class="fas fa-satellite"></i>
+                        </div>
+                        <h4>DGPS & Total Station</h4>
+                        <p>Using Differential GPS and robotic Total Stations for millimeter-level accuracy in large-scale infrastructure projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Portfolio -->
+    <section id="portfolio" class="section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h6>OUR WORK</h6>
+                <h2>Recent Projects</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in">
+                    <div class="portfolio-item">
+                        <img src="C:\Users\saura\OneDrive\Desktop\Sarate Surveyor\Chakan-29-3-2024-Model_page-0001 (1).jpg" alt="Pipeline Work">
+                        <div class="portfolio-overlay">
+                            <h5 class="fw-bold">Gas Pipeline L-Section</h5>
+                            <p class="small">Chakan to CNG Pump Pune</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="portfolio-item">
+                        <img src="C:\Users\saura\OneDrive\Desktop\Sarate Surveyor\BAVADGANFINAL=-Model_page-0001 (1).jpg" alt="Road Survey">
+                        <div class="portfolio-overlay">
+                            <h5 class="fw-bold">Road Survey</h5>
+                            <p class="small">Bavadgan Project</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="portfolio-item">
+                        <img src="C:\Users\saura\OneDrive\Desktop\Sarate Surveyor\AMBADVETHA-Model_page-0001 (1).jpg" alt="Topographic Map">
+                        <div class="portfolio-overlay">
+                            <h5 class="fw-bold">Contour Survey</h5>
+                            <p class="small">Ambarwet, Mulshi</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in">
+                    <div class="portfolio-item">
+                        <img src="D:\Rohit_Surveyour\Imges\Portfolio-img\GORHE BK.GAT 142 DHANANJAY  06-11-2023f_page-0001 (1).jpg" alt="Land Marking">
+                        <div class="portfolio-overlay">
+                            <h5 class="fw-bold">Boundary Demarcation</h5>
+                            <p class="small">Gorhe Bk</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="portfolio-item">
+                        <img src="D:\Rohit_Surveyour\Imges\Portfolio-img\parali & Sajanghad-15-11-21-Model_page-0001 (1).jpg" alt="Water Line">
+                        <div class="portfolio-overlay">
+                            <h5 class="fw-bold">Water Pipeline</h5>
+                            <p class="small">Parali & Sajjangad</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="portfolio-item">
+                        <img src="C:\Users\saura\OneDrive\Desktop\Sarate Surveyor\Kunjirwadi-7-3-24-sidhu-Model_page-0001 (1).jpg" alt="Construction Staking">
+                        <div class="portfolio-overlay">
+                            <h5 class="fw-bold">Construction Staking</h5>
+                            <p class="small">Kunjirwadi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logo Slider -->
+    <section class="client-section">
+        <div class="container">
+            <h5 class="text-center text-muted mb-4">TRUSTED BY INDUSTRY LEADERS</h5>
+            <div class="logo-slider">
+                <div class="logo-track">
+    <!-- Logos from Wikimedia Commons (Colour Versions) -->
+
+    <div class="logo-slide">
+        <img src="https://upload.wikimedia.org/wikipedia/hi/8/8c/Hindustan_Petroleum_Logo.svg" alt="HPCL">
+    </div>
+
+    <div class="logo-slide">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Indian_Oil_Logo.svg" alt="IOCL">
+    </div>
+
+    <div class="logo-slide">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Bharat_Petroleum_logo.svg" alt="BPCL">
+    </div>
+
+    <div class="logo-slide">
+  <img src="https://logowik.com/content/uploads/images/mahanagar-gas-mgl2831.jpg" alt="MGL">
+</div>
+
+
+    
+
+    <!-- Duplicate for infinite scroll effect -->
+
+    <div class="logo-slide">
+        <img src="https://upload.wikimedia.org/wikipedia/hi/8/8c/Hindustan_Petroleum_Logo.svg" alt="HPCL">
+    </div>
+
+    <div class="logo-slide">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Indian_Oil_Logo.svg" alt="IOCL">
+    </div>
+
+    <div class="logo-slide">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Bharat_Petroleum_logo.svg" alt="BPCL">
+    </div>
+
+    <div class="logo-slide">
+  <img src="https://logowik.com/content/uploads/images/mahanagar-gas-mgl2831.jpg" alt="MGL">
+</div>
+
+
+   
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h6>GET IN TOUCH</h6>
+                <h2>Contact Us</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="h-100 d-flex flex-column justify-content-center">
+                        <h3 class="mb-4">Let's discuss your project</h3>
+                        <p class="mb-5 text-muted">We provide free consultations and estimates. Reach out to us via phone or visit our office in Pune.</p>
+                        
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Office Address</h5>
+                                <p class="text-muted">Sarate House, 883, Kondhwe Dhawade,<br>Khadakmaal, Pune, Maharashtra 411023</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Phone Numbers</h5>
+                                <p class="text-muted mb-0">+91 9307628023</p>
+                                <p class="text-muted">+91 9890917634</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Email Address</h5>
+                                <p class="text-muted">sssarate123@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="contact-bg">
+                        <!-- Netlify Form -->
+                        <form name="contact" method="POST" data-netlify="true">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" name="firstname" class="form-control" placeholder="John" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Last Name</label>
+                                    <input type="text" name="lastname" class="form-control" placeholder="Doe" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" name="email" class="form-control" placeholder="name@example.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" name="phone" class="form-control" placeholder="+91 98765 43210">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Service Required</label>
+                                <select name="service" class="form-control text-white" style="background: rgba(255,255,255,0.1);">
+                                    <option value="General" style="color: #333">Select a Service</option>
+                                    <option value="Gas Pipeline" style="color: #333">Gas Pipeline Survey</option>
+                                    <option value="Water Pipeline" style="color: #333">Water Pipeline Survey</option>
+                                    <option value="Boundary" style="color: #333">Boundary Survey</option>
+                                    <option value="Topographic" style="color: #333">Topographic Survey</option>
+                                    <option value="Other" style="color: #333">Other</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Message</label>
+                                <textarea name="message" class="form-control" rows="4" placeholder="How can we help you?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-custom w-100">SEND MESSAGE</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white">SARATE SURVEYOR</h5>
+                    <p>Established in 1996, we are a government-registered micro-enterprise dedicated to delivering high-precision surveying and engineering services.</p>
+                    <div class="mt-3">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white">QUICK LINKS</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home"><i class="fas fa-angle-right me-2 text-warning"></i>Home</a></li>
+                        <li class="mb-2"><a href="#about"><i class="fas fa-angle-right me-2 text-warning"></i>About Us</a></li>
+                        <li class="mb-2"><a href="#services"><i class="fas fa-angle-right me-2 text-warning"></i>Services</a></li>
+                        <li class="mb-2"><a href="#portfolio"><i class="fas fa-angle-right me-2 text-warning"></i>Projects</a></li>
+                        <li class="mb-2"><a href="#contact"><i class="fas fa-angle-right me-2 text-warning"></i>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-white">CONTACT INFO</h5>
+                    <p><i class="fas fa-home me-2 text-warning"></i> Sarate House, Kondhwe Dhawade, Pune - 411023</p>
+                    <p><i class="fas fa-envelope me-2 text-warning"></i> sssarate123@gmail.com</p>
+                    <p><i class="fas fa-phone me-2 text-warning"></i> +91 9890917634</p>
+                    <p><i class="fas fa-clock me-2 text-warning"></i> Mon - Sat: 9:00 AM - 7:00 PM</p>
+                </div>
+            </div>
+            <hr class="border-secondary mt-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2024 Sarate Surveyor. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Privacy Policy | Terms of Service</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').classList.add('shadow');
+            } else {
+                document.querySelector('.navbar').classList.remove('shadow');
+            }
+        });
+
+        // Close mobile menu on click
+        const navLinks = document.querySelectorAll('.nav-link');
+        const menuToggle = document.getElementById('navbarNav');
+        const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle:false});
+        navLinks.forEach((l) => {
+            l.addEventListener('click', () => { if(window.innerWidth < 992) { bsCollapse.hide(); } })
+        })
+    </script>
+</body>
+</html>
