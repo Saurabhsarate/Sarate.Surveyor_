@@ -166,14 +166,18 @@
             });
             
             if (isValid) {
-                // Submit form to Netlify via AJAX
+                // Submit form to new email via FormSubmit AJAX
                 const formData = new FormData(contactForm);
-                fetch("/", {
+                fetch("https://formsubmit.co/ajax/saurabhsarate357@gmail.com", {
                     method: "POST",
-                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                    body: new URLSearchParams(formData).toString()
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(Object.fromEntries(formData))
                 })
-                .then(() => {
+                .then(response => response.json())
+                .then(data => {
                     contactForm.style.display = 'none';
                     formSuccess.style.display = 'flex';
                 })
