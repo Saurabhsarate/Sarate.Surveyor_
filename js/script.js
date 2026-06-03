@@ -166,9 +166,18 @@
             });
             
             if (isValid) {
-                // Simulate form submission
-                contactForm.style.display = 'none';
-                formSuccess.style.display = 'flex';
+                // Submit form to Netlify via AJAX
+                const formData = new FormData(contactForm);
+                fetch("/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams(formData).toString()
+                })
+                .then(() => {
+                    contactForm.style.display = 'none';
+                    formSuccess.style.display = 'flex';
+                })
+                .catch(error => alert('Submission failed. Please try again.'));
             }
         });
         

@@ -237,7 +237,7 @@
 
             <div class="portfolio-grid">
                 <div class="portfolio-item fade-in" data-category="pipeline">
-                    <img src="https://saratesurveyors.netlify.app/assets/images/Chakan-29-3-2024-Model_page-0001%20(1).jpg"
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800"
                         alt="Gas Pipeline L-Section, Chakan to CNG Pump" loading="lazy">
                     <div class="portfolio-overlay">
                         <h4>Gas Pipeline L-Section, Chakan to CNG Pump</h4>
@@ -245,7 +245,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item fade-in" data-category="road">
-                    <img src="https://saratesurveyors.netlify.app/assets/images/BAVADGANFINAL%3D-Model_page-0001%20(1).jpg"
+                    <img src="https://images.unsplash.com/photo-1582214400329-37fba4db9b9a?q=80&w=800"
                         alt="Road Survey, Bavadgan Project" loading="lazy">
                     <div class="portfolio-overlay">
                         <h4>Road Survey, Bavadgan Project</h4>
@@ -253,7 +253,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item fade-in" data-category="topographic">
-                    <img src="https://saratesurveyors.netlify.app/assets/images/AMBADVETHA-Model_page-0001%20(1).jpg"
+                    <img src="https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?q=80&w=800"
                         alt="Contour Survey, Ambarwet Mulshi" loading="lazy">
                     <div class="portfolio-overlay">
                         <h4>Contour Survey, Ambarwet Mulshi</h4>
@@ -261,7 +261,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item fade-in" data-category="boundary">
-                    <img src="https://saratesurveyors.netlify.app/assets/images/GORHE%20BK.GAT%20142%20DHANANJAY%20%2006-11-2023f_page-0001%20(1).jpg"
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800"
                         alt="Boundary Demarcation, Gorhe Bk" loading="lazy">
                     <div class="portfolio-overlay">
                         <h4>Boundary Demarcation, Gorhe Bk</h4>
@@ -269,7 +269,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item fade-in" data-category="pipeline">
-                    <img src="https://saratesurveyors.netlify.app/assets/images/parali%20%26%20Sajanghad-15-11-21-Model_page-0001%20(1).jpg"
+                    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=800"
                         alt="Water Pipeline Survey, Parali & Sajjangad" loading="lazy">
                     <div class="portfolio-overlay">
                         <h4>Water Pipeline Survey, Parali & Sajjangad</h4>
@@ -277,10 +277,10 @@
                     </div>
                 </div>
                 <div class="portfolio-item fade-in" data-category="topographic">
-                    <img src="https://saratesurveyors.netlify.app/assets/images/Kunjirwadi-7-3-24-sidhu-Model_page-0001%20(1).jpg"
-                        alt="Construction Staking, Kunjirwadi" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?q=80&w=800"
+                        alt="Topographic Survey, Kunjirwadi" loading="lazy">
                     <div class="portfolio-overlay">
-                        <h4>Construction Staking, Kunjirwadi</h4>
+                        <h4>Topographic Survey, Kunjirwadi</h4>
                         <div class="zoom-icon">🔍</div>
                     </div>
                 </div>
@@ -533,35 +533,36 @@
 
             <!-- Right Form -->
             <div class="fade-in">
-                <form id="contact-form" class="contact-form">
+                <form id="contact-form" class="contact-form" name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact" />
                     <div class="form-row">
                         <div class="form-group">
                             <label>First Name *</label>
-                            <input type="text" class="form-control" required oninput="this.value = this.value.replace(/[()\/₹:&]/g, '')">
+                            <input type="text" name="first_name" class="form-control" required oninput="this.value = this.value.replace(/[()\/₹:&]/g, '')">
                         </div>
                         <div class="form-group">
                             <label>Last Name *</label>
-                            <input type="text" class="form-control" required oninput="this.value = this.value.replace(/[()\/₹:&]/g, '')">
+                            <input type="text" name="last_name" class="form-control" required oninput="this.value = this.value.replace(/[()\/₹:&]/g, '')">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label>Email Address *</label>
-                            <input type="email" class="form-control" required oninput="this.value = this.value.replace(/[()\/₹:&]/g, '')">
+                            <input type="email" name="email" class="form-control" required oninput="this.value = this.value.replace(/[()\/₹:&]/g, '')">
                         </div>
                         <div class="form-group">
                             <label>Phone Number *</label>
-                            <input type="tel" class="form-control" required oninput="this.value = this.value.replace(/[()\/₹:&]/g, '')">
+                            <input type="tel" name="phone" class="form-control" required oninput="this.value = this.value.replace(/[()\/₹:&]/g, '')">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label>Company *</label>
-                            <input type="text" class="form-control" required oninput="this.value = this.value.replace(/[()\/₹:&]/g, '')">
+                            <input type="text" name="company" class="form-control" required oninput="this.value = this.value.replace(/[()\/₹:&]/g, '')">
                         </div>
                         <div class="form-group">
                             <label>Service Required *</label>
-                            <select class="form-control" required>
+                            <select name="service" class="form-control" required>
                                 <option value="">Select Service</option>
                                 <option value="Gas Pipeline">Gas Pipeline Survey</option>
                                 <option value="Water Pipeline">Water Pipeline Survey</option>
@@ -574,11 +575,11 @@
                     </div>
                     <div class="form-group">
                         <label>Project Location *</label>
-                        <input type="text" class="form-control" required oninput="this.value = this.value.replace(/[()\/₹:&]/g, '')">
+                        <input type="text" name="location" class="form-control" required oninput="this.value = this.value.replace(/[()\/₹:&]/g, '')">
                     </div>
                     <div class="form-group">
                         <label>Message *</label>
-                        <textarea class="form-control" required oninput="this.value = this.value.replace(/[()\/₹:&]/g, '')"></textarea>
+                        <textarea name="message" class="form-control" required oninput="this.value = this.value.replace(/[()\/₹:&]/g, '')"></textarea>
                     </div>
                     <button type="submit" class="btn btn-amber submit-btn">📨 Send Message</button>
                 </form>
