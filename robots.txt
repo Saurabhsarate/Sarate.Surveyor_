@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Replace the URL below with your actual domain once it's live
-Sitemap: https://www.saratesurveyor.com/sitemap.xml
+Sitemap: https://saratesurveyor.site/sitemap.xml
